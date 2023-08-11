@@ -1,3 +1,13 @@
+/* general settings that will override any annoying defaults */
+/* '*' represents all elements on the site */
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .App {
   text-align: center;
 }
@@ -13,9 +23,39 @@
   }
 }
 
+/* Variables */
+:root {
+  --white: #e6ece8;
+
+  --tea-green: #bfd7b5;
+  --cambridge-blue: #8bb8a8;
+  --process-cyan: #01baef;
+  --indigo-dye: #344966;
+  --rich-black: #0d1821;
+  --persian-red: #bb4430;
+
+  --background-color: #ececec;
+  --secondary-color: #cfe6a8;
+  --secondary-shadow: #ccc;
+  --text: #171414;
+
+  --taylor-swift: #549e5f;
+  --fearless: #e2e88a;
+  --speak-now: #7958cc;
+  --red: #c04532;
+  --1989: #3cb5e1;
+  --reputation: #242425;
+  --lover: #ed80dd;
+  --folklore: #bec6ce;
+  --evermore: #bf8323;
+  --midnights: #322c5e;
+
+  --lover-secondary: #8b387f;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--tea-green);
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +65,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ec6bf2;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +76,45 @@
     transform: rotate(360deg);
   }
 }
+
+menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Button settings */
+Button {
+  background-color: var(--cambridge-blue);
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: var(--white);
+}
+
+Button:hover {
+  background-color: var(--indigo-dye);
+}
+
+/* Table settings
+.flex-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--secondary-color);
+  padding: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.cell {
+  flex: 1;
+  padding: 8px;
+  background-color: var(--lover);
+  color: var(--lover-secondary);
+  border-radius: 15px;
+  border-collapse: seperate;
+  border-spacing: 15px;
+} */
