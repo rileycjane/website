@@ -1,4 +1,4 @@
-import "./App.css";
+import "./Home.css";
 
 const FlexTable = () => {
   return (
