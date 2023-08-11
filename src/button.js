@@ -1,5 +1,10 @@
-const Button = ({ label, onClick }) => {
-  return <button onClick={onClick}>{label}</button>;
+const IconButton = ({ label, style, icon, onClick }) => {
+  return (
+    <button className={style} onClick={onClick}>
+      {label}
+      <div className="icon">{icon}</div>
+    </button>
+  );
 };
 
-export default Button;
+export default IconButton;

@@ -1,42 +1,19 @@
 /* Style for my portfolio */
+@import url(icons.css);
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
-/* Variables */
-:root {
-  /* basic colors */
-  --white: #e6ece8;
-  --black: #000000;
-
-  /* main palette */
-  --tea-green: #bfd7b5;
-  --cambridge-blue: #8bb8a8;
-  --process-cyan: #01baef;
-  --indigo-dye: #344966;
-  --rich-black: #0d1821;
-  --persian-red: #bb4430;
-
-  --background-color: #ececec;
-  --secondary-color: #cfe6a8;
-  --secondary-shadow: #ccc;
-
-  /* misc */
-  --transition: all 0.25s linear;
-  --spacing: 0.1rem;
-  --radius: 0.5rem;
-}
-
-/* general settings that will override any annoying defaults */
-/* '*' represents all elements on the site */
-* {
-  padding: 0;
-  margin: 0;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Noto+Serif+TC&display=swap");
 /* Main Home style */
 .Home {
   text-align: center;
+  background-color: var(--anti-flash-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--traditional);
 }
 
 .Home-logo {
@@ -51,18 +28,16 @@
 }
 
 .Home-header {
-  background-color: var(--tea-green);
+  background-color: var(--process-cyan);
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.Home-link {
-  color: #ec6bf2;
+  font-family: var(--traditional);
 }
 
 @keyframes Home-logo-spin {
@@ -73,87 +48,58 @@
     transform: rotate(360deg);
   }
 }
-
-/* Rules for sizing the icon. */
-.material-icons.md-18 {
-  font-size: 18px;
+h1 {
+  padding: 10px;
 }
-.material-icons.md-24 {
-  font-size: 24px;
-}
-.material-icons.md-36 {
-  font-size: 36px;
-}
-.material-icons.md-48 {
-  font-size: 48px;
-}
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark {
-  color: rgba(0, 0, 0, 0.54);
-}
-.material-icons.md-dark.md-inactive {
-  color: rgba(0, 0, 0, 0.26);
-}
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light {
-  color: rgba(255, 255, 255, 1);
-}
-.material-icons.md-light.md-inactive {
-  color: rgba(255, 255, 255, 0.3);
-}
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  color: var(--persian-red);
-}
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px; /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: "liga";
-}
-
-/* Interactivity style */
 menu {
   display: flex;
-  justify-content: space-around;
+  background-color: var(--cambridge-blue);
+  height: 100px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 }
+
 /* Button settings */
 Button {
-  background-color: var(--cambridge-blue);
-  border: none;
-  border-radius: 15px;
-  padding: 10px;
-  color: var(--white);
+  height: 50px;
+  padding: 20px;
+
+  font: var(--traditional);
+  font-size: 20px;
+  color: var(--anti-flash-white);
   letter-spacing: var(--spacing);
   transition: var(--transition);
 }
 
-Button:hover {
-  background-color: var(--indigo-dye);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--citron);
+  border: none;
+  border-radius: var(--button-radius);
 }
 
-.selected {
+.menu-button:hover {
+  background-color: var(--citron-shadow);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--process-cyan);
+  border: none;
+  font-size: 15px;
+}
+
+.more-button:hover {
+  color: var(--citron);
+}
+
+.button-selected {
   width: 290px;
   height: 70px;
   /* margin-top: var(--margin); */
@@ -270,26 +216,50 @@ Button:hover {
     width: 400px;
   }
 }
-/* Table settings
-.flex-table {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--secondary-color);
-  padding: 15px;
+/****************************/
+/* Global vars and settings */
+/****************************/
+:root {
+  /* fonts */
+  --traditional: "Noto Serif TC", serif;
+  --grotesque: "Bricolage Grotesque", sans-serif;
+  --ff-secondary: "Lustria", serif;
+  --ff-header: "Comfortaa", cursive;
+  --ff-size1: 64px;
+  --ff-size2: 16px;
+
+  /* basic colors */
+  --white: #e6ece8;
+  --black: #000000;
+
+  /* main palette */
+  --tea-green: #bfd7b5;
+  --anti-flash-white: #eef0f2;
+  --citron: #c5c763;
+  --citron-shadow: #b2b441;
+  --cambridge-blue: #8bb8a8;
+  --process-cyan: #01baef;
+  --indigo-dye: #344966;
+  --rich-black: #0d1821;
+  --persian-red: #bb4430;
+
+  --background-color: #ececec;
+  --secondary-color: #cfe6a8;
+  --secondary-shadow: #ccc;
+
+  /* misc */
+  --transition: all 0.25s linear;
+  --spacing: 0.08rem;
+  --radius: 0.5rem;
+  --button-radius: 1.5rem;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
+/* general settings that will override any annoying defaults */
+/* '*' represents all elements on the site */
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-
-.cell {
-  flex: 1;
-  padding: 8px;
-  background-color: var(--lover);
-  color: var(--lover-secondary);
-  border-radius: 15px;
-  border-collapse: seperate;
-  border-spacing: 15px;
-} */
