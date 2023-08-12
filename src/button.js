@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 const IconButton = ({ label, style, icon, onClick }) => {
   return (
-    <button className={style} onClick={onClick}>
-      {label}
-      <div className="icon">{icon}</div>
-    </button>
+    <Link to={onClick}>
+      <button className={style}>
+        {label}
+        <div className="icon">{icon}</div>
+      </button>
+    </Link>
   );
 };
 

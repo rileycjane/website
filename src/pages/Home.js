@@ -1,31 +1,12 @@
-import logo from "./logo.svg";
+import logo from "../logo.svg";
 import "./Home.css";
+// import { Link } from "react-router-dom;
 // import FlexTable from "./FlexTable";
-import IconButton from "./button";
-import Sidebar from "./Sidebar";
-import { Link } from "react-router-dom";
+import IconButton from "../button";
+// import Sidebar from "../Sidebar";
+import About from "./About";
 
 const Home = () => {
-  const handlePottery = () => {
-    console.log("Button clicked uwu");
-  };
-  const handlePhoto = () => {
-    return (
-      <li>
-        <Link to="/pottery"></Link>
-      </li>
-    );
-  };
-  const handleProject = () => {
-    return (
-      <li>
-        <Link to="/projects"></Link>
-      </li>
-    );
-  };
-  const moreInfo = () => {
-    return console.log("more info!");
-  };
   return (
     <div className="Home">
       <link
@@ -48,26 +29,26 @@ const Home = () => {
             label="projects"
             style="menu-button"
             icon="code"
-            onClick={handleProject}
+            onClick="/project"
           />
           <IconButton
             label="photography"
             style="menu-button"
             icon="camera_roll"
-            onClick={handlePhoto}
+            onClick="/photo"
           />
           <IconButton
             label="pottery"
             style="menu-button"
             icon="coffee"
-            onClick={handlePottery}
+            onClick="/pottery"
           />
         </menu>
         <IconButton
           label="about me!"
           style="more-button"
           icon="expand_more"
-          onClick={moreInfo}
+          onClick="/about"
         />
       </header>
     </div>
