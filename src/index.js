@@ -17,15 +17,12 @@ export default function App() {
       {" "}
       <Routes>
         {" "}
-        <Route path="/" element={<Layout />}>
-          {" "}
-          <Route index element={<Home />} />{" "}
-          <Route path="about" element={<About />} />{" "}
-          <Route path="photos" element={<Photos />} />{" "}
-          <Route path="pottery" element={<Pottery />} />{" "}
-          <Route path="projects" element={<Projects />} />{" "}
-          <Route path="*" element={<NoPage />} />{" "}
-        </Route>{" "}
+        <Route index element={<Home />} />{" "}
+        <Route path="about" element={<About />} />{" "}
+        <Route path="photos" element={<Photos />} />{" "}
+        <Route path="pottery" element={<Pottery />} />{" "}
+        <Route path="projects" element={<Projects />} />{" "}
+        <Route path="*" element={<NoPage />} />{" "}
       </Routes>{" "}
     </BrowserRouter>
   );
