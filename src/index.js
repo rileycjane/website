@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Photos from "./pages/Photo";
 import Pottery from "./pages/Pottery";
 import NoPage from "./pages/NoPage";
+import Projects from "./pages/Projects";
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
           <Route index element={<Home />} />{" "}
           <Route path="about" element={<About />} />{" "}
           <Route path="photos" element={<Photos />} />{" "}
+          <Route path="pottery" element={<Pottery />} />{" "}
+          <Route path="projects" element={<Projects />} />{" "}
           <Route path="*" element={<NoPage />} />{" "}
         </Route>{" "}
       </Routes>{" "}

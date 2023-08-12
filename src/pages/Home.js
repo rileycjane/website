@@ -29,13 +29,13 @@ const Home = () => {
             label="projects"
             style="menu-button"
             icon="code"
-            onClick="/project"
+            onClick="/projects"
           />
           <IconButton
             label="photography"
             style="menu-button"
             icon="camera_roll"
-            onClick="/photo"
+            onClick="/photos"
           />
           <IconButton
             label="pottery"
